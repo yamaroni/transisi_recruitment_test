@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 
 class DioHelper {
@@ -19,15 +21,15 @@ class DioHelper {
     dio!.interceptors.add(
       InterceptorsWrapper(
         onResponse: (response, responseInterceptorHandler) {
-          print('${response.statusCode} - ${response.data.toString()}\n');
+          log('${response.statusCode} - ${response.data.toString()}\n');
           return responseInterceptorHandler.next(response);
         },
         onRequest: (request, requestInterceptorHandler) {
-          print('${request.method} - ${request.path} - ${request.data}');
+          log('${request.method} - ${request.path} - ${request.data}');
           return requestInterceptorHandler.next(request);
         },
         onError: (DioException error, errorInterceptor) {
-          print(error.message);
+          log(error.message.toString());
           return errorInterceptor.next(error);
         },
       ),

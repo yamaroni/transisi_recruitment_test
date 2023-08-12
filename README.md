@@ -2,6 +2,8 @@
 This project is for recruitment test on PT. Transisi Teknologi Mandiri purpose only.
 ## Tech Spec
 - Flutter 3.10.5
+- Clean Architecture
+- Solid Principle
 - BLoC State Management
 - Freezed Class Generator
 - Json Serializable Generator
