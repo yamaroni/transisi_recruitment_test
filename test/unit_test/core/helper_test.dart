@@ -1,4 +1,4 @@
-import 'package:clean_architecture_template/core/helpers/global_helper.dart';
+import 'package:transisi_recruitment_test/core/helpers/global_helper.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
